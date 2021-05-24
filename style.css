@@ -31,12 +31,24 @@ body {
     width: 25%;
 }
 
+.col-md-4 {
+    width: 33.3%;
+}
+
 .col-md-6 {
     width: 50%;
 }
 
+.col-md-8 {
+    width: 66.6%;
+}
+
 .col-md-9 {
     width: 75%;
+}
+
+.col-md-12 {
+    width: 100%;
 }
 
 [class*="col-"] {
@@ -94,6 +106,7 @@ body {
     top: 50px;
     left: 143px;
     visibility: hidden;
+    z-index: 20;
        }
 
 .submenu>li>a {
@@ -115,13 +128,6 @@ body {
     background-color: white;
     color: #2c71b8;
 }
-
-/* .submenu>li>a:hover .menu>:nth-child(2)>a {
-    background-color: #2c71b8;
-    color: white;  
-} */
-
-
 
 .form-search {
     border: 1px solid #2c71b8;
@@ -190,3 +196,175 @@ input::placeholder {
     left: -10px;
 }
 
+.breadcrumbs {
+    height: 50px;
+    opacity: 50%;
+}
+
+.breadcrumbs > a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    line-height: 50px;
+}
+
+.breadcrumbs > span {
+    color: white;
+    font-size: 14px;
+    line-height: 50px;
+}
+
+.laptops {
+    height: 50px;
+}
+
+.laptops > span {
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 50px;
+}
+
+.sort-golov {
+    height: 50px;
+    padding-top: 5px;
+}
+.sort {
+    height: 38px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color:#2c71b8;
+    border: white solid 1px;
+    padding-left: 10px;
+    line-height: 25px;
+}
+
+.sort > span {
+    color: white;
+}
+
+.product {
+    padding-top: 15px;
+}
+.product-image {
+    background-color: white;
+    height: 180px;
+    position: relative;
+}
+
+.product-image img {
+    position: absolute;
+    top: 25%;
+    left: 33%;
+}
+
+.zoom {
+    height: 30px;
+    width: 30px;
+    border: solid 1px #2c71b8 ;
+    background-image: url(images/square-blue.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.like {
+    height: 30px;
+    width: 30px;
+    border: solid 1px #2c71b8 ;
+    background-image: url(images/heart-blue.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+}
+
+.product-body {
+    height: 470px;
+    border: solid 1px white;
+}
+
+.product-title {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.product-description {
+    color: white;
+    font-size: 21px;
+    font-weight: 300;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.product-features {
+    color: white;
+    font-size: 21px;
+    font-weight: 300;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.product-features span {
+    padding: 5px;
+    padding-top: 5px;
+}
+
+.bigtext {
+    font-weight: bold;
+}
+
+.type {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.ram {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.screen_size {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.product-price {
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+sup {
+    vertical-align: super;
+    font-size: 60%;
+}
+
+.product-body button {
+    width: 210px;
+    height: 50px;
+    color: white;
+    background-color:#2c71b8 ;
+    border: solid 1px white;
+    font-size: 21px;
+    font-weight: bold;
+    margin: 15px 30px 15px 30px;
+   
+}
+
+.product-body button:hover {
+    color:#2c71b8 ;
+    background-color: white;
+
+}
