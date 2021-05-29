@@ -71,6 +71,20 @@ body {
 .menu>li:last-child {
     border-right: 1px solid #2c71b8; ;
 }
+.q {
+   position: relative;
+}
+
+.arrow {
+    width: 16px;
+    height: 16px;
+    background-image: url(images/arrow_blue.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 18px;
+    left: 115px;
+    }
+
 
 .menu>li>a {
     display: block;
@@ -93,18 +107,20 @@ body {
     color: white;
 }
 
+.menu>li:hover .arrow {
+    background-image: url(images/arrow_white.png);
+}
+
 .menu>:nth-child(2):hover .submenu {
     visibility: visible;
 }
 
-.menu {
-    position: relative;
-}
+
 .submenu {
     width: 286px;
     position: absolute;
     top: 50px;
-    left: 143px;
+    left: 0px;
     visibility: hidden;
     z-index: 20;
        }
