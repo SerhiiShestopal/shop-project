@@ -258,6 +258,16 @@ input::placeholder {
 .sort > span {
     color: white;
 }
+#sort1 {
+    width: 95%;
+    height: 100%;
+    border: none;
+    background-color: #2c71b8;
+    color: white;
+    font-size: 21px;
+    font-weight: 300;
+    outline: none;
+}
 
 .product {
     padding-top: 15px;
