@@ -120,7 +120,7 @@ body {
     width: 286px;
     position: absolute;
     top: 50px;
-    left: 0px;
+    left: -1px;
     visibility: hidden;
     z-index: 20;
        }
