@@ -64,7 +64,77 @@
     <main class="main">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">Filter</div>
+                <div class="col-md-3">
+                    <div class="filter">
+                        <div class="text">DEVICE TYPE</div>
+                        <div class="filter-products">
+                            <input type="checkbox" id="device">
+                            <label for="device"></label>
+                            <span>Laptop</span>
+                        </div>
+                        <div class="filter-products">
+                            <input type="checkbox" id="tablet">
+                            <label for="tablet"></label>
+                            <span>Tablet</span>
+                        </div>
+                        <div class="text">COLOR</div>
+                        <div class="filter-colors">
+                            <input type="checkbox" id="black">
+                            <label for="black"></label>
+                            <span>Black</span>
+                        </div>
+                        <div class="filter-colors">
+                            <input type="checkbox" id="red">
+                            <label for="red"></label>
+                            <span>Red</span>
+                        </div>
+                        <div class="filter-colors">
+                            <input type="checkbox" id="green">
+                            <label for="green"></label>
+                            <span>Green</span>
+                        </div>
+                        <div class="filter-colors">
+                            <input type="checkbox" id="blue">
+                            <label for="blue"></label>
+                            <span>Blue</span>
+                        </div>
+                        <div class="filter-colors">
+                            <input type="checkbox" id="orange">
+                            <label for="orange"></label>
+                            <span>Orange</span>
+                        </div>
+                        <div class="text">RAM</div>
+                        <div class="filter-ram">
+                            <input type="checkbox" id="one">
+                            <label for="one"></label>
+                            <span>1GB</span>
+                        </div>
+                        <div class="filter-ram">
+                            <input type="checkbox" id="two">
+                            <label for="two"></label>
+                            <span>2GB</span>
+                        </div>
+                        <div class="filter-ram">
+                            <input type="checkbox" id="four">
+                            <label for="four"></label>
+                            <span>4GB</span>
+                        </div>
+                        <div class="filter-ram">
+                            <input type="checkbox" id="six">
+                            <label for="six"></label>
+                            <span>6GB</span>
+                        </div>
+                        <div class="filter-ram">
+                            <input type="checkbox" id="eight">
+                            <label for="eight"></label>
+                            <span>8GB</span>
+                        </div>
+                        <span>Show more options...</span>
+                        <button>SUBMIT</button>
+
+                        
+                    </div>
+                </div>
                 <div class="col-md-9">
                     <div class="row">
                         <div class="col-md-12">
@@ -112,8 +182,12 @@
                                     <div class="product-price">
                                         <p><span>$599<sup>25</sup></span></p> 
                                     </div>
-                                    <button>MORE DETAILS</button>
-                                    <button>ADD TO CART</button>
+                                    <button class="button-more">MORE DETAILS</button>
+                                    <div class="add-to-cart">
+                                        <button class="button-add">ADD TO CART</button>
+                                        <div class="basket"></div>
+                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -139,8 +213,11 @@
                                     <div class="product-price">
                                         <p><span>$1250<sup>99</sup></span></p> 
                                     </div>
-                                    <button>MORE DETAILS</button>
-                                    <button>ADD TO CART</button>
+                                    <button class="button-more">MORE DETAILS</button>
+                                    <div class="add-to-cart">
+                                        <button class="button-add">ADD TO CART</button>
+                                        <div class="basket"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -166,8 +243,11 @@
                                     <div class="product-price">
                                         <p><span>$399<sup>50</sup></span></p> 
                                     </div>
-                                    <button>MORE DETAILS</button>
-                                    <button>ADD TO CART</button>
+                                    <button class="button-more">MORE DETAILS</button>
+                                    <div class="add-to-cart">
+                                        <button class="button-add">ADD TO CART</button>
+                                        <div class="basket"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -193,8 +273,11 @@
                                     <div class="product-price">
                                         <p><span>$599<sup>25</sup></span></p> 
                                     </div>
-                                    <button>MORE DETAILS</button>
-                                    <button>ADD TO CART</button>
+                                    <button class="button-more">MORE DETAILS</button>
+                                    <div class="add-to-cart">
+                                        <button class="button-add">ADD TO CART</button>
+                                        <div class="basket"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -220,8 +303,11 @@
                                     <div class="product-price">
                                         <p><span>$1250<sup>99</sup></span></p> 
                                     </div>
-                                    <button>MORE DETAILS</button>
-                                    <button>ADD TO CART</button>
+                                    <button class="button-more">MORE DETAILS</button>
+                                    <div class="add-to-cart">
+                                        <button class="button-add">ADD TO CART</button>
+                                        <div class="basket"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -247,14 +333,105 @@
                                     <div class="product-price">
                                         <p><span>$399<sup>50</sup></span></p> 
                                     </div>
-                                    <button>MORE DETAILS</button>
-                                    <button>ADD TO CART</button>
+                                    <button class="button-more">MORE DETAILS</button>
+                                    <div class="add-to-cart">
+                                        <button class="button-add">ADD TO CART</button>
+                                        <div class="basket"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4"></div>
-                        <div class="col-md-4"></div>
-                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="images/tablet.png" alt="tablet">
+                                    <div class="zoom"></div>
+                                    <div class="like"></div>
+                                </div>
+                                <div class="product-body">
+                                    <div class="product-title">
+                                        <h3>#1 Device Name</h3>
+                                    </div>
+                                    <div class="product-description">
+                                        <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h4>
+                                    </div>
+                                    <div class="product-features">
+                                        <p class="type"><span class="bigtext">TYPE: </span><span> Laptop</span></p>
+                                        <p class="screen_size"><span class="bigtext">SCREEN SIZE: </span><span> 7 inches</span></p>
+                                        <p class="ram"><span class="bigtext">RAM: </span><span> 1 GB</span></p>
+                                    </div>
+                                    <div class="product-price">
+                                        <p><span>$599<sup>25</sup></span></p> 
+                                    </div>
+                                    <button class="button-more">MORE DETAILS</button>
+                                    <div class="add-to-cart">
+                                        <button class="button-add">ADD TO CART</button>
+                                        <div class="basket"></div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="images/console.png" alt="console">
+                                    <div class="zoom"></div>
+                                    <div class="like"></div>
+                                </div>
+                                <div class="product-body">
+                                    <div class="product-title">
+                                        <h3>#2 Device Name</h3>
+                                    </div>
+                                    <div class="product-description">
+                                        <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h4>
+                                    </div>
+                                    <div class="product-features">
+                                        <p class="type"><span class="bigtext">TYPE: </span><span> Laptop</span></p>
+                                        <p class="screen_size"><span class="bigtext">SCREEN SIZE: </span><span> 7 inches</span></p>
+                                        <p class="ram"><span class="bigtext">RAM: </span><span> 1 GB</span></p>
+                                    </div>
+                                    <div class="product-price">
+                                        <p><span>$1250<sup>99</sup></span></p> 
+                                    </div>
+                                    <button class="button-more">MORE DETAILS</button>
+                                    <div class="add-to-cart">
+                                        <button class="button-add">ADD TO CART</button>
+                                        <div class="basket"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="images/clock.png" alt="clock">
+                                    <div class="zoom"></div>
+                                    <div class="like"></div>
+                                </div>
+                                <div class="product-body">
+                                    <div class="product-title">
+                                        <h3>#3 Device Name</h3>
+                                    </div>
+                                    <div class="product-description">
+                                        <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h4>
+                                    </div>
+                                    <div class="product-features">
+                                        <p class="type"><span class="bigtext">TYPE: </span><span> Laptop</span></p>
+                                        <p class="screen_size"><span class="bigtext">SCREEN SIZE: </span><span> 7 inches</span></p>
+                                        <p class="ram"><span class="bigtext">RAM: </span><span> 1 GB</span></p>
+                                    </div>
+                                    <div class="product-price">
+                                        <p><span>$399<sup>50</sup></span></p> 
+                                    </div>
+                                    <button class="button-more">MORE DETAILS</button>
+                                    <div class="add-to-cart">
+                                        <button class="button-add">ADD TO CART</button>
+                                        <div class="basket"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
