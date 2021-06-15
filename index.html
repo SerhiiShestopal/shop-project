@@ -53,7 +53,7 @@
                             </div>
                             <div class="col-md-3">
                                 <div class="cart">
-                                    <div class="product-count">4</div>
+                                    <div class="product-count" id="products-count">0</div>
                                 </div>
                             </div>
                         </div>
@@ -165,13 +165,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row product-page">
                         <div class="col-md-4">
                             <div class="product">
                                 <div class="product-image">
                                     <img src="images/monitor.png" alt="monitor">
                                     <div class="zoom"></div>
-                                    <div class="like"></div>
+                                    <div class="block-like like"></div>
                                 </div>
                                 <div class="product-body">
                                     <div class="product-title">
@@ -202,7 +202,7 @@
                                 <div class="product-image">
                                     <img src="images/console.png" alt="console">
                                     <div class="zoom"></div>
-                                    <div class="like"></div>
+                                    <div class="block-like like"></div>
                                 </div>
                                 <div class="product-body">
                                     <div class="product-title">
@@ -232,7 +232,7 @@
                                 <div class="product-image">
                                     <img src="images/clock.png" alt="clock">
                                     <div class="zoom"></div>
-                                    <div class="like"></div>
+                                    <div class="block-like like"></div>
                                 </div>
                                 <div class="product-body">
                                     <div class="product-title">
@@ -262,7 +262,7 @@
                                 <div class="product-image">
                                     <img src="images/laptop.png" alt="laptop">
                                     <div class="zoom"></div>
-                                    <div class="like"></div>
+                                    <div class="block-like like"></div>
                                 </div>
                                 <div class="product-body">
                                     <div class="product-title">
@@ -292,7 +292,7 @@
                                 <div class="product-image">
                                     <img src="images/player.png" alt="player">
                                     <div class="zoom"></div>
-                                    <div class="like"></div>
+                                    <div class="block-like like"></div>
                                 </div>
                                 <div class="product-body">
                                     <div class="product-title">
@@ -322,7 +322,7 @@
                                 <div class="product-image">
                                     <img src="images/mobile.png" alt="mobile">
                                     <div class="zoom"></div>
-                                    <div class="like"></div>
+                                    <div class="block-like like"></div>
                                 </div>
                                 <div class="product-body">
                                     <div class="product-title">
@@ -352,7 +352,7 @@
                                 <div class="product-image">
                                     <img src="images/tablet.png" alt="tablet">
                                     <div class="zoom"></div>
-                                    <div class="like"></div>
+                                    <div class="block-like like"></div>
                                 </div>
                                 <div class="product-body">
                                     <div class="product-title">
@@ -383,7 +383,7 @@
                                 <div class="product-image">
                                     <img src="images/console.png" alt="console">
                                     <div class="zoom"></div>
-                                    <div class="like"></div>
+                                    <div class="block-like like"></div>
                                 </div>
                                 <div class="product-body">
                                     <div class="product-title">
@@ -413,7 +413,7 @@
                                 <div class="product-image">
                                     <img src="images/clock.png" alt="clock">
                                     <div class="zoom"></div>
-                                    <div class="like"></div>
+                                    <div class="block-like like"></div>
                                 </div>
                                 <div class="product-body">
                                     <div class="product-title">
@@ -444,5 +444,22 @@
         </div>
     </main>
     <footer class="footer">footer</footer>
+
+    <div class="modal">
+        <div class="modal-block">
+            <form>
+                <div class="btn-close">X</div>
+                <h3>Please call for more details</h3>
+                <div class="form-fields">
+                    <input type="text" placeholder="Your name">
+                </div>
+                <div class="form-fields">
+                    <input type="text" placeholder="Your phone">
+                </div>
+                <button>Please call</button>
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
