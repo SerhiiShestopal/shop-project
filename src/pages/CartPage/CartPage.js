@@ -23,6 +23,7 @@ const useStyles = makeStyles({
 const CartPage = ({
     productsInCart,
     removeProductFromCart,
+    changeProductQuantity,
     productsObj = getProductsObj(productsArray),
 }) => {
     const classes = useStyles()
@@ -45,7 +46,24 @@ const CartPage = ({
                                     Price for one items: {productsObj[id].price}
                                 </p>
                                 <p>Count: {productsInCart[id]}</p>
-                                <Quantity count={productsInCart[id]} />
+                                <Quantity
+                                    minCount={0}
+                                    onIncrementClick={() =>
+                                        changeProductQuantity(
+                                            id,
+                                            productsInCart[id] + 1
+                                        )
+                                    }
+                                    onDecrementClick={() =>
+                                        productsInCart[id] === 1
+                                            ? removeProductFromCart(id)
+                                            : changeProductQuantity(
+                                                  id,
+                                                  productsInCart[id] - 1
+                                              )
+                                    }
+                                    count={productsInCart[id]}
+                                />
                                 <Button
                                     variant="contained"
                                     color="primary"
