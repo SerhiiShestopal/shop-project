@@ -1,0 +1,28 @@
+.product-img {
+    text-align: center;
+}
+
+.product-img img {
+    height: 150px;
+    width: auto;
+}
+
+.product-price {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.product-quantity button {
+    padding: 7px 15px;
+}
+
+.product-quantity,
+.product-quantity input {
+    text-align: center;
+}
+
+.btn-wrap {
+    justify-content: center;
+    margin-bottom: 15px;
+}
