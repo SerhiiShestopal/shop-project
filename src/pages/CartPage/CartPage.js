@@ -1,18 +1,11 @@
 import React from 'react'
 import { keys } from 'lodash'
-import productsArray from '../../components/Products/productsArray'
+import productsArray, {
+    getProductsObj,
+} from '../../components/Products/productsArray'
 import { Button, Card, CardContent, Grid, makeStyles } from '@material-ui/core'
 import DeleteIcon from '@material-ui/icons/Delete'
 import CartTotal from '../../components/Cart/CartTotal'
-
-// eslint-disable-next-line no-unused-vars
-const productsObj = productsArray.reduce(
-    (object, product) => ({
-        ...object,
-        [product.id]: product,
-    }),
-    {}
-)
 
 const useStyles = makeStyles({
     media: {
@@ -26,7 +19,11 @@ const useStyles = makeStyles({
     },
 })
 
-const CartPage = ({ productsInCart, removeProductFromCart }) => {
+const CartPage = ({
+    productsInCart,
+    removeProductFromCart,
+    productsObj = getProductsObj(productsArray),
+}) => {
     const classes = useStyles()
     return (
         <>
