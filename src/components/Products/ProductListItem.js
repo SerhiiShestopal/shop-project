@@ -5,7 +5,7 @@ import CardContent from '@material-ui/core/CardContent'
 import Button from '@material-ui/core/Button'
 import CardActions from '@material-ui/core/CardActions'
 import './ProductListItem.css'
-import TextField from '@material-ui/core/TextField'
+import Quantity from '../Quantity/Quantity'
 
 const ProductListItem = ({
     id,
@@ -19,6 +19,14 @@ const ProductListItem = ({
 }) => {
     const [count, setCount] = useState(1)
 
+    const onIncrementClick = () => {
+        setCount(count + 1)
+    }
+
+    const onDecrementClick = () => {
+        setCount(count - 1)
+    }
+
     return (
         <Card>
             <CardContent>
@@ -30,23 +38,11 @@ const ProductListItem = ({
                 <div>Type: {type}</div>
                 <div>Color: {color}</div>
                 <div className="product-price">{price}$</div>
-                <div className="product-quantity">
-                    <Button
-                        variant="outlined"
-                        onClick={() => setCount(count - 1)}
-                        disabled={count <= 1}
-                    >
-                        -
-                    </Button>
-                    <TextField variant="outlined" size="small" value={count} />
-                    <Button
-                        variant="outlined"
-                        onClick={() => setCount(count + 1)}
-                        disabled={count >= 10}
-                    >
-                        +
-                    </Button>
-                </div>
+                <Quantity
+                    count={count}
+                    onDecrementClick={onDecrementClick}
+                    onIncrementClick={onIncrementClick}
+                />
             </CardContent>
             <CardActions className="btn-wrap">
                 <Button

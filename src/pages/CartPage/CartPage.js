@@ -6,6 +6,7 @@ import productsArray, {
 import { Button, Card, CardContent, Grid, makeStyles } from '@material-ui/core'
 import DeleteIcon from '@material-ui/icons/Delete'
 import CartTotal from '../../components/Cart/CartTotal'
+import Quantity from '../../components/Quantity/Quantity'
 
 const useStyles = makeStyles({
     media: {
@@ -44,7 +45,14 @@ const CartPage = ({
                                     Price for one items: {productsObj[id].price}
                                 </p>
                                 <p>Count: {productsInCart[id]}</p>
-                                <Button variant="contained" color="primary">
+                                <Quantity count={productsInCart[id]} />
+                                <Button
+                                    variant="contained"
+                                    color="primary"
+                                    style={{
+                                        marginTop: 20,
+                                    }}
+                                >
                                     <DeleteIcon
                                         onClick={() =>
                                             removeProductFromCart(id)
