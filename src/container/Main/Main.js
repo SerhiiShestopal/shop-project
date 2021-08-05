@@ -2,6 +2,7 @@ import Container from '@material-ui/core/Container'
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import ProductsList from '../../components/Products/ProductsList'
+import Testimonials from '../../components/Testimonials/Testimonials'
 import CartPage from '../../pages/CartPage/CartPage'
 import PaymentPage from '../../pages/Payment/PaymentPage'
 import ShipingPage from '../../pages/Shiping/ShipingPage'
@@ -19,7 +20,10 @@ const Main = ({
                     path="/"
                     exact
                     render={() => (
-                        <ProductsList addProductToCart={addProductToCart} />
+                        <>
+                            <ProductsList addProductToCart={addProductToCart} />
+                            <Testimonials />
+                        </>
                     )}
                 />
 
