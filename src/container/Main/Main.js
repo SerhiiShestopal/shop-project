@@ -12,6 +12,8 @@ const Main = ({
     productsInCart,
     removeProductFromCart,
     changeProductQuantity,
+    changeLiked,
+    likeButtonsState,
 }) => {
     return (
         <Container>
@@ -21,7 +23,11 @@ const Main = ({
                     exact
                     render={() => (
                         <>
-                            <ProductsList addProductToCart={addProductToCart} />
+                            <ProductsList
+                                addProductToCart={addProductToCart}
+                                changeLiked={changeLiked}
+                                likeButtonsState={likeButtonsState}
+                            />
                             <Testimonials />
                         </>
                     )}
@@ -34,6 +40,7 @@ const Main = ({
                             productsInCart={productsInCart}
                             removeProductFromCart={removeProductFromCart}
                             changeProductQuantity={changeProductQuantity}
+                            likeButtonsState={likeButtonsState}
                         />
                     )}
                 />

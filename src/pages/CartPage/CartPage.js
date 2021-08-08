@@ -7,6 +7,8 @@ import { Button, Card, CardContent, Grid, makeStyles } from '@material-ui/core'
 import DeleteIcon from '@material-ui/icons/Delete'
 import CartTotal from '../../components/Cart/CartTotal'
 import Quantity from '../../components/Quantity/Quantity'
+import FavoriteIcon from '@material-ui/icons/Favorite'
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder'
 
 const useStyles = makeStyles({
     media: {
@@ -25,8 +27,10 @@ const CartPage = ({
     removeProductFromCart,
     changeProductQuantity,
     productsObj = getProductsObj(productsArray),
+    likeButtonsState,
 }) => {
     const classes = useStyles()
+
     return (
         <>
             <h1>Cart Page</h1>
@@ -40,7 +44,15 @@ const CartPage = ({
                                     className={classes.media}
                                 />
                             </div>
+
                             <CardContent>
+                                <Button variant="outlined">
+                                    {likeButtonsState[id] ? (
+                                        <FavoriteIcon />
+                                    ) : (
+                                        <FavoriteBorderIcon />
+                                    )}
+                                </Button>
                                 <div>{productsObj[id].name}</div>
                                 <p>
                                     Price for one items: {productsObj[id].price}

@@ -13,6 +13,17 @@ const App = () => {
         2: 1,
     })
 
+    const [likeButtonsState, setLikeButtonsState] = useState({
+        1: true,
+        2: true,
+    })
+
+    const changeLiked = (id, isLiked) =>
+        setLikeButtonsState({
+            ...likeButtonsState,
+            [id]: (likeButtonsState[id] || false) === isLiked ? true : false,
+        })
+
     // eslint-disable-next-line no-unused-vars
     const addProductToCart = (id, count) =>
         setProductsInCart({
@@ -34,13 +45,18 @@ const App = () => {
     return (
         <>
             <CssBaseline />
-            <Header productsInCart={productsInCart} />
+            <Header
+                productsInCart={productsInCart}
+                likeButtonsState={likeButtonsState}
+            />
 
             <Main
                 addProductToCart={addProductToCart}
                 productsInCart={productsInCart}
                 removeProductFromCart={removeProductFromCart}
                 changeProductQuantity={changeProductQuantity}
+                changeLiked={changeLiked}
+                likeButtonsState={likeButtonsState}
             />
         </>
     )

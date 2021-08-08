@@ -6,6 +6,8 @@ import Button from '@material-ui/core/Button'
 import CardActions from '@material-ui/core/CardActions'
 import './ProductListItem.css'
 import Quantity from '../Quantity/Quantity'
+import FavoriteIcon from '@material-ui/icons/Favorite'
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder'
 
 const ProductListItem = ({
     id,
@@ -16,6 +18,8 @@ const ProductListItem = ({
     price,
     image,
     addProductToCart,
+    changeLiked,
+    likeButtonsState,
 }) => {
     const [count, setCount] = useState(1)
 
@@ -27,12 +31,30 @@ const ProductListItem = ({
         setCount(count - 1)
     }
 
+    const [isLiked, setIsLiked] = useState(false)
+
+    const changeIsLiked = () => {
+        setIsLiked(isLiked === true ? false : true)
+    }
+
     return (
         <Card>
             <CardContent>
                 <div className="product-img">
                     <img src={image} />
                 </div>
+
+                <Button
+                    variant="outlined"
+                    onClick={() => (changeLiked(id, isLiked), changeIsLiked)}
+                >
+                    {likeButtonsState[id] ? (
+                        <FavoriteIcon />
+                    ) : (
+                        <FavoriteBorderIcon />
+                    )}
+                </Button>
+
                 <h4>{name}</h4>
                 <p>{description}</p>
                 <div>Type: {type}</div>

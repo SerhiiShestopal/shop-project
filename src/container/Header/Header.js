@@ -9,6 +9,7 @@ import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/core'
 import Menu from './Menu/Menu'
 import Cart from './Cart/Cart'
+import Favorites from './Favorites/Favorites'
 
 const useStyles = makeStyles(() => ({
     menuButton: {
@@ -19,7 +20,7 @@ const useStyles = makeStyles(() => ({
     },
 }))
 
-const Header = ({ productsInCart }) => {
+const Header = ({ productsInCart, likeButtonsState }) => {
     const classes = useStyles()
 
     return (
@@ -38,6 +39,7 @@ const Header = ({ productsInCart }) => {
                         Fake shop
                     </Typography>
                     <Menu />
+                    <Favorites likeButtonsState={likeButtonsState} />
                     <Cart productsInCart={productsInCart} />
                 </Toolbar>
             </Container>
